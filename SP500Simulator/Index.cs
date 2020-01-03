@@ -9,6 +9,7 @@ namespace SP500Simulator
     {
         public int MinimumYear { get; set; }
         public int MaximumYear { get; set; }
+        public string Name { get; set; }
 
         public IEnumerable<double> Historical;
 
@@ -31,7 +32,9 @@ namespace SP500Simulator
             result.TotalInvestment = totalInvestment;
             result.FinalCapital = currentCapital;
             result.TotalGain = totalGain;
+            result.Name = Name;
             return result;
+        
         }
     }
 }
