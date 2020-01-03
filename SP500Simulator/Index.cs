@@ -33,6 +33,8 @@ namespace SP500Simulator
             result.FinalCapital = currentCapital;
             result.TotalGain = totalGain;
             result.Name = Name;
+            result.StartYear = startYear;
+            result.EndYear = endYear;
             return result;
         
         }

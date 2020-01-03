@@ -51,6 +51,7 @@ namespace SP500Simulator
             }  
             
             Console.WriteLine(result.Name);
+            Console.WriteLine("Simulation from ( " + result.StartYear + " ) to ( " + result.EndYear + " )");
             Console.WriteLine("Final Capital : " + result.FinalCapital);
             Console.WriteLine("Total Investment : " + result.TotalInvestment);
             Console.WriteLine("Total Gain : " + result.TotalGain);
