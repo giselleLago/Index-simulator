@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SP500Simulator
+namespace IndexSimulator
 {
     public class Program
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SP500Simulator
+namespace IndexSimulator
 {
     public class SimulationResult
     {
