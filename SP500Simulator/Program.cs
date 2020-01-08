@@ -8,16 +8,16 @@ namespace SP500Simulator
         
         public static void Main(string[] args)
         {
-            Console.WriteLine("Choose Index \n S&P 500 (SP)\n DJIA (DJ)");
+            Console.WriteLine("Choose Index \n S&P 500 (1)\n DJIA (2)\n NASDAQ (3)");
             var chooseIndex = Console.ReadLine().ToUpper();
-            if (chooseIndex != "SP" && chooseIndex != "DJ")
+            if (chooseIndex != "1" && chooseIndex != "2" && chooseIndex != "3")
             {
                 do
                 {
-                    Console.WriteLine("Index must be (SP) or (DJ)");
-                    Console.WriteLine("Choose Index \n S&P 500 (SP)\n DJIA (DJ)");
+                    Console.WriteLine("ERROR!\nIndex must be (1)(2)(3)");
+                    Console.WriteLine("Choose Index \n S&P 500 (1)\n DJIA (2)\n NASDAQ (3)");
                     chooseIndex = Console.ReadLine().ToUpper();
-                } while (chooseIndex != "SP" && chooseIndex != "DJ");
+                } while (chooseIndex != "1" && chooseIndex != "2" && chooseIndex != "3");
             }
             Console.WriteLine("Initial Capital: ");
             var initialcap = int.Parse(Console.ReadLine());
