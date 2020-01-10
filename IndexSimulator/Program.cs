@@ -14,7 +14,7 @@ namespace IndexSimulator
             {
                 do
                 {
-                    Console.WriteLine("ERROR!\nIndex must be (1)(2)(3)");
+                    Console.WriteLine("Index must be (1)(2)(3)");
                     Console.WriteLine("Choose Index \n S&P 500 (1)\n DJIA (2)\n NASDAQ (3)");
                     chooseIndex = Console.ReadLine().ToUpper();
                 } while (chooseIndex != "1" && chooseIndex != "2" && chooseIndex != "3");
@@ -30,7 +30,7 @@ namespace IndexSimulator
 
             var indexFactory = new IndexFactory();
             var index = indexFactory.Create(chooseIndex);
-            var result = index.Calculate(initialcap, annualInvest, startY, endY); ;
+            var result = index.Calculate(initialcap, annualInvest, startY, endY);
  
             
             Console.WriteLine(result.Name);
