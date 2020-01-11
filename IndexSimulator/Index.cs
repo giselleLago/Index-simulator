@@ -10,7 +10,6 @@ namespace IndexSimulator
         public int MinimumYear { get; set; }
         public int MaximumYear { get; set; }
         public string Name { get; set; }
-
         public IEnumerable<double> Historical;
 
         public SimulationResult Calculate(double initialcapital, double annualInvestment, int startYear, int endYear)
@@ -19,24 +18,24 @@ namespace IndexSimulator
             var indexEnd = endYear - MinimumYear;
             var totalInvestment = initialcapital;
             double currentCapital = initialcapital;
+
             for (int i = indexStart; i <= indexEnd; i++)
             {
                 var anualReturn = Historical.ElementAt(i);
                 totalInvestment += annualInvestment;
                 currentCapital += currentCapital * (anualReturn / 100) + annualInvestment;
-
             }
-            var totalGain = currentCapital - totalInvestment;
 
-            var result = new SimulationResult();
-            result.TotalInvestment = totalInvestment;
-            result.FinalCapital = currentCapital;
-            result.TotalGain = totalGain;
-            result.Name = Name;
-            result.StartYear = startYear;
-            result.EndYear = endYear;
-            return result;
-        
+            var totalGain = currentCapital - totalInvestment;
+            return new SimulationResult
+            {
+                TotalInvestment = totalInvestment,
+                FinalCapital = currentCapital,
+                TotalGain = totalGain,
+                Name = Name,
+                StartYear = startYear,
+                EndYear = endYear
+            };
         }
     }
 }

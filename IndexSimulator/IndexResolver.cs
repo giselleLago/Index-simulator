@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace IndexSimulator
@@ -50,19 +48,15 @@ namespace IndexSimulator
             return HistoricalData;
         }
 
-
         private string GetIndexName(string html)
         {
             var regexp = new Regex("<title>(?<name>.*?) -", RegexOptions.Singleline);
             var indexName = regexp.Match(html).Groups["name"].Value.ToString();
             return WebUtility.HtmlDecode(indexName);
-           
         }
 
-        public string GetIndexName()
-        {
-            return _indexName;
-        }
+        public string IndexName => _indexName;
+
         public int GetMinimumYear() => _serie.Min(x => x.Year);
 
         public int GetMaximumYear() => _serie.Max(x => x.Year);

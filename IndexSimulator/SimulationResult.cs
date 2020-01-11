@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IndexSimulator
+﻿namespace IndexSimulator
 {
     public class SimulationResult
     {
@@ -12,6 +8,5 @@ namespace IndexSimulator
         public string Name { get; set; }
         public int StartYear { get; set; }
         public int EndYear { get; set; }
-
     }
 }
